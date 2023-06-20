@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Slackside+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
   --purple: #5288e2;
@@ -8,9 +9,15 @@
   --bg-dark: #222222;
   --blue: #3c486b;
   --branco: #dcdada;
+  --bootstrap-color: #8C76F4;
+  --react-color: #5ED3F3;
+  --sql-color: #00718A;
+  --php-color: #687AB1;
+
   --orange-ui: #f7d060;
   --orange-ui-con: #e6bc3e;
-  --menu-height: 63px;
+  --menu-height: 68px;
+
 }
 
 * {
@@ -56,13 +63,50 @@ header {
   height: calc(100vh - var(--menu-height));
   display: flex;
   align-items: center;
+ /*  justify-content: space-between; */
+
 }
 
-header .container {
+ header .container , header .container2{
   padding: 0px 100px;
-  height: fit-content;
   width: 50%;
+} 
+
+/* header .container2 {
+    display: flex;
+   justify-content: space-around;
+
+} */
+
+
+header .container2 p{
+ /*   background-color: red; */
+   font-family: 'Press Start 2P', cursive;
+
+   font-size: 20px;
 }
+
+header .container2 p span{
+    color: var(--orange-ui);
+    font-size: 20px;
+}
+
+header .container2 p:hover:nth-child(1){
+    color: var(--bootstrap-color);
+}
+header .container2 p:hover:nth-child(2){
+    color: var(--react-color);
+}
+
+header .container2 p:hover:nth-child(3){
+    color: var(--sql-color);
+}
+header .container2 p:hover:nth-child(4){
+    color: var(--php-color);
+}
+
+
+
 
 header .container button {
   margin-top: 20px;
@@ -84,10 +128,15 @@ nav p {
   font-size: 20px;
 }
 
+nav ul{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
 nav ul a {
   text-decoration: none;
   color: #fff;
-  margin: 0 25px;
   font-size: 18px;
   font-weight: bold;
 }
@@ -100,4 +149,24 @@ nav ul a:hover {
 section {
   height: 750px;
   background-color: red;
+}
+
+
+/* RESPONSIVIDADE */
+
+/* TABLET */
+@media (max-width: 767px) {
+
+    header{
+        color: tomato;
+    }
+}
+
+/* TELEFONE */
+
+@media (max-width: 480px) {
+    
+    header{
+        color: blueviolet;
+    }
 }
