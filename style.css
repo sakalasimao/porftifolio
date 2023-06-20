@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Slackside+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+
+:root {
+  --purple: #5288e2;
+  --green: 15cdcb;
+  --bg-dark: #222222;
+  --blue: #3c486b;
+  --branco: #dcdada;
+  --orange-ui: #f7d060;
+  --orange-ui-con: #e6bc3e;
+  --menu-height: 63px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+}
+
+body,
+button,
+textarea,
+input {
+  /* font-family: 'Roboto', sans-serif; */
+
+  font-family: "Urbanist", sans-serif;
+  background-color: var(--bg-dark);
+  color: #fff;
+}
+
+h1 {
+  font-size: 44px;
+}
+h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+button {
+  background-color: var(--orange-ui);
+  border: 0;
+  padding: 15px 33px;
+  color: #000;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+button:hover {
+  cursor: pointer;
+}
+header {
+  height: calc(100vh - var(--menu-height));
+  display: flex;
+  align-items: center;
+}
+
+header .container {
+  padding: 0px 100px;
+  height: fit-content;
+  width: 50%;
+}
+
+header .container button {
+  margin-top: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: var(--menu-height);
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-dark);
+}
+
+nav p {
+  font-weight: bold;
+  font-family: "Slackside One", cursive;
+  font-size: 20px;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 25px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav ul a:hover {
+  color: var(--orange-ui-con);
+  transition: 1s;
+}
+
+section {
+  height: 750px;
+  background-color: red;
+}
