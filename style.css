@@ -33,7 +33,6 @@ button,
 textarea,
 input {
   /* font-family: 'Roboto', sans-serif; */
-
   font-family: "Urbanist", sans-serif;
   background-color: var(--bg-dark);
   color: #fff;
@@ -63,7 +62,6 @@ header {
   height: calc(100vh - var(--menu-height));
   display: flex;
   align-items: center;
- /*  justify-content: space-between; */
 
 }
 
@@ -72,15 +70,9 @@ header {
   width: 50%;
 } 
 
-/* header .container2 {
-    display: flex;
-   justify-content: space-around;
-
-} */
 
 
 header .container2 p{
- /*   background-color: red; */
    font-family: 'Press Start 2P', cursive;
 
    font-size: 20px;
@@ -93,16 +85,24 @@ header .container2 p span{
 
 header .container2 p:hover:nth-child(1){
     color: var(--bootstrap-color);
+    cursor: default;
+    
 }
 header .container2 p:hover:nth-child(2){
     color: var(--react-color);
+    cursor: default;
+   
 }
 
 header .container2 p:hover:nth-child(3){
     color: var(--sql-color);
+    cursor: default;
+   
 }
 header .container2 p:hover:nth-child(4){
     color: var(--php-color);
+    cursor: default;
+    
 }
 
 
@@ -130,7 +130,7 @@ nav p {
 
 nav ul{
     display: flex;
-    width: 50%;
+   width: 50%;
     justify-content: space-around;
 }
 
@@ -140,6 +140,11 @@ nav ul a {
   font-size: 18px;
   font-weight: bold;
 }
+
+nav ul a svg{
+  display: none;
+}
+
 
 nav ul a:hover {
   color: var(--orange-ui-con);
@@ -155,18 +160,57 @@ section {
 /* RESPONSIVIDADE */
 
 /* TABLET */
-@media (max-width: 767px) {
 
+
+/* EXTRA FORTE */
+@media (max-width: 840px) {
     header{
         color: tomato;
+    }
+    header .container2{
+        display: none;
+    }
+    header .container{
+        width: 100%;
+        padding: 0 30px;
+    }
+    nav{
+        padding: 0 10px;
+    }
+    nav p{
+        display: none;
+    }
+    nav ul{
+        padding: 0;
+        width: 100%;
+    }
+    nav ul a{
+      font-size: 16px;
     }
 }
 
 /* TELEFONE */
+@media (max-width: 361px) {
+  nav ul a{
+    font-size: 13px;
+  }
+}
 
 @media (max-width: 480px) {
     
     header{
         color: blueviolet;
+    }
+
+    nav{
+      padding: 5px;
+    }
+   nav ul a{
+      font-size: 12px;
+    } 
+
+    nav ul a svg{
+      display: block;
+      margin: 0 auto 10px;
     }
 }
