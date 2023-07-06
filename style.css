@@ -200,10 +200,15 @@ section {
     
     header{
         color: blueviolet;
+        padding-bottom: 40px;
     }
 
     nav{
-      padding: 5px;
+      padding: 0 5px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      top: unset;
     }
    nav ul a{
       font-size: 12px;
