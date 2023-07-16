@@ -10,7 +10,7 @@
   --blue: #3c486b;
   --branco: #dcdada;
   --bootstrap-color: #8C76F4;
-  --react-color: #5ED3F3;
+  --react-color: #5ef37c;
   --sql-color: #00718A;
   --php-color: #687AB1;
 
@@ -151,10 +151,28 @@ nav ul a:hover {
   transition: 1s;
 }
 
-section {
-  height: 750px;
-  background-color: red;
+.about-me {
+  display: flex;
+  padding: 100px;
 }
+
+.about-me .container{
+  width: 50%;
+  padding-right: 50px;
+}
+.about-me .img-container{
+  width: 50%;
+  text-align: center;
+}
+
+.about-me .img-container img{
+  width: 50%;
+  border-top-right-radius: 20px;
+
+}
+
+
+
 
 
 /* RESPONSIVIDADE */
