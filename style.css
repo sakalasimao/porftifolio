@@ -120,6 +120,7 @@ nav {
   position: sticky;
   top: 0;
   background-color: var(--bg-dark);
+  z-index: 99;
 }
 
 nav p {
@@ -163,25 +164,82 @@ nav ul a:hover {
 .about-me .img-container{
   width: 50%;
   text-align: center;
+ 
 }
+
 
 .about-me .img-container img{
   width: 50%;
   border-top-right-radius: 20px;
+  object-fit: cover;
+  border: 2px solid var(--branco);
 
 }
 
+.services{
+  margin-top: -20px;
+}
+.services-container{
+  display: flex;
+  gap: 10px;
+  padding: 0 150px;
+}
 
+.services h1{
+  padding-left: 100px;
+}
 
+.services-container .service-card{
+  width: 50%;
+  padding: 30px 10px;
+  border: 2px solid var(--branco);
+  
+}
 
+.services-container .service-card {
+  text-align: center;
+}
+
+.portfolio{
+  height: 200px;
+}
 
 /* RESPONSIVIDADE */
 
+
+
+/* IMAGEM RESPONSIVO */
+
+@media (max-width: 900px) {
+  
+    .about-me{
+      flex-direction: column;
+      padding: 30px;
+
+    }
+
+    .about-me .container, .about-me .img-container{
+      width: 100%;
+
+    }
+
+    .about-me .container{
+      padding-right: 0px;
+    }
+
+    .about-me .container{
+      margin: 70px 0;
+    }
+
+}
+
 /* TABLET */
-
-
 /* EXTRA FORTE */
 @media (max-width: 840px) {
+
+  .services h1{
+    padding-left: 30px;
+  }
     header{
         color: tomato;
     }
@@ -207,15 +265,58 @@ nav ul a:hover {
     }
 }
 
+/* RESPONSIVIDADE TABLET SERVIÇOS  */
+
+@media (max-width: 700px) {
+
+  .services{
+    padding: 0;
+  }
+  
+  .services .services-container{
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services .services-container .service-card{
+    width: 80% ;
+
+    
+  }
+ 
+
+
+}
+
+
+
+
 /* TELEFONE */
 @media (max-width: 361px) {
   nav ul a{
     font-size: 13px;
   }
+
+
 }
 
+
 @media (max-width: 480px) {
-    
+
+  .about-me{
+    padding: 30px;
+
+  }
+
+  .about-me .container h1, .services h1{
+    text-align: center;
+  }
+
+  .services h1{
+    padding-left: unset;
+  }
+ 
     header{
         color: blueviolet;
         padding-bottom: 40px;
